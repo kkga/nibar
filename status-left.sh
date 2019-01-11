@@ -1,7 +1,8 @@
 #!/bin/bash
 
 export LC_TIME="en_US.UTF-8"
-TIME=$(date +"%a %H:%M")
+TIME=$(date +"%H:%M")
+DATE=$(date +"%a %d/%m/%Y")
 
 BATTERY_PERCENTAGE=$(pmset -g batt | egrep '([0-9]+\%).*' -o --colour=auto | cut -f1 -d'%')
 
@@ -29,7 +30,10 @@ WIFI_SSID=$(networksetup -getairportnetwork en0 | cut -c 24-)
 
 echo $(cat <<-EOF
 {
-  "time": "$TIME",
+  "datetime": {
+    "time": "$TIME",
+    "date": "$DATE"
+  },
   "battery": {
     "percentage": $BATTERY_PERCENTAGE,
     "charging": $BATTERY_CHARGING

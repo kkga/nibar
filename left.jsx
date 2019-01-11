@@ -1,4 +1,4 @@
-import Time from './lib/Time/index.jsx';
+import DateTime from './lib/DateTime/index.jsx';
 import Battery from './lib/Battery/index.jsx';
 import Cpu from './lib/Cpu/index.jsx';
 import Memory from './lib/Memory/index.jsx';
@@ -20,7 +20,7 @@ export const render = ({output}) => {
 			<Memory output={data.memory}/>
 			<Cpu output={data.cpu}/>
       <Battery output={data.battery}/>
-      <Time output={data.time}/>
+      <DateTime output={data.datetime}/>
     </div>
   )
 }

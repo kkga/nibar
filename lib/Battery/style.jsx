@@ -2,7 +2,7 @@ export const container = {
   height: '100%',
   width: '75px',
   position: 'absolute',
-  right: '95px',
+  right: '185px',
   top: '0px'
 }
 
