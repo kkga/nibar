@@ -2,7 +2,7 @@ import Desktop from './lib/Desktop/index.jsx';
 import { rightSide } from './lib/style.jsx';
 import parse from './lib/parse.jsx';
 
-export const refreshFrequency = 100
+export const refreshFrequency = 500
 
 export const command = './powerbar/status-right.sh'
 
