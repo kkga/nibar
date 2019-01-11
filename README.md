@@ -1,5 +1,8 @@
 # powerbar
-Übersicht widget status bar in Powerline style with chunkwm support.
+[Übersicht](https://github.com/felixhageloh/uebersicht) widget status bar in Powerline style with chunkwm support.
+
+## Screenshoot
+![img](./screenshot.png)
 
 ## Installation
 
