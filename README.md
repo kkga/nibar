@@ -1,5 +1,5 @@
-# uberbar
-Übersicht widget status bar with chunkwm support.
+# powerbar
+Übersicht widget status bar in Powerline style with chunkwm support.
 
 ## Installation
 
