@@ -27,9 +27,6 @@ MEMORY_TOTAL=$(memory_pressure | grep system | awk -F" " '{print $5}' | grep -o 
 
 WIFI_SSID=$(networksetup -getairportnetwork en0 | cut -c 24-)
 
-DESKTOP_ACTIVE=$(chunkc tiling::query -d id)
-DESKTOP_TOTAL=$(chunkc tiling::query -D 1 | tail -c 1)
-
 echo $(cat <<-EOF
 {
   "time": "$TIME",
@@ -54,10 +51,6 @@ echo $(cat <<-EOF
 	},
 	"wifi": {
 		"ssid": "$WIFI_SSID"
-	},
-	"desktop": {
-		"active": $DESKTOP_ACTIVE,
-		"total": $DESKTOP_TOTAL
 	}
 }
 EOF

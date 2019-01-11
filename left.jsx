@@ -4,20 +4,17 @@ import Cpu from './lib/Cpu/index.jsx';
 import Memory from './lib/Memory/index.jsx';
 import Hdd from './lib/Hdd/index.jsx';
 import Wifi from './lib/Wifi/index.jsx';
-import Desktop from './lib/Desktop/index.jsx';
-import { bar } from './lib/style.jsx';
+import { leftSide } from './lib/style.jsx';
 import parse from './lib/parse.jsx';
 
-export const refreshFrequency = 100
+export const refreshFrequency = 15000
 
-export const command = './uberbar/status.sh'
+export const command = './powerbar/status-left.sh'
 
 export const render = ({output}) => {
   const data = parse(output);
   return (
-    <div style={bar}>
-      <link href="/uberbar/common/css/all.css" rel="stylesheet"/>
-			<Desktop output={data.desktop}/>
+    <div style={leftSide}>
 			<Wifi output={data.wifi}/>
 			<Hdd output={data.hdd}/>
 			<Memory output={data.memory}/>
