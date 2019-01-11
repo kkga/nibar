@@ -1,6 +1,6 @@
 export const container = {
   height: '100%',
-  width: '75px',
+  width: '85px',
   position: 'absolute',
   right: '185px',
   top: '0px'
@@ -18,7 +18,7 @@ export const arrow = {
 
 export const content = {
   height: '100%',
-  width: '65px',
+  width: '75px',
   background: 'rgba(76, 86, 106, 1)',
   textAlign: 'left',
   color: 'rgba(235, 239, 243, 1)',
