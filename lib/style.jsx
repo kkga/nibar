@@ -12,7 +12,7 @@ export const bar = {
   WebkitBackdropFilter: 'blur(15px)'
 }
 
-export const rightSide = {
+export const leftSide = {
   height: '20px',
   width: '50%',
   position: 'fixed',
@@ -26,7 +26,7 @@ export const rightSide = {
   color: 'rgba(216, 222, 232, 1)'
 }
 
-export const leftSide = {
+export const rightSide = {
   height: '20px',
   width: '50%',
   position: 'fixed',
