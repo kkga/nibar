@@ -1,20 +1,14 @@
 export const container = {
-  height: "100%",
-  // width: "305px",
-  position: "absolute",
-  left: "0px",
-  top: "0px"
+  direction: "rtl",
+  display: "grid",
+  gridAutoFlow: "column",
+  gridGap: "16px",
+  color: "#6C6C6C"
 };
 
 export const content = {
-  height: "100%",
-  width: "30px",
-  // fontWeight: "bold",
-  textAlign: "center",
-  color: "#6C6C6C",
-  position: "absolute",
-  // paddingLeft: "7px",
-  left: "-10px"
+  width: "2ch",
+  textAlign: "left"
 };
 
 export default null;

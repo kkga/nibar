@@ -13,9 +13,12 @@ export const bar = {
 
 export const leftSide = {
   height: "20px",
-  width: "50%",
+  padding: "0 12px",
+  display: "grid",
+  gridAutoFlow: "column",
+  gridGap: "20px",
+  // width: "50%",
   position: "fixed",
-  display: "flex",
   overflow: "hidden",
   left: "0px",
   top: "0px",
