@@ -1,15 +1,15 @@
-# powerbar
-[Übersicht](https://github.com/felixhageloh/uebersicht) widget status bar in Powerline style with chunkwm support.
+# nibar
 
-## Screenshoot
-![img](./screenshot.png)
+Simple [Übersicht](https://github.com/felixhageloh/uebersicht) widget status bar with [yabai](https://github.com/koekeishiya/yabai) support.
+
+## Screenshot
+
+![img](./ss.png)
 
 ## Installation
 
-1. Clone this repo to your Übersicht widgets directory.
+Clone this repo to your Übersicht widgets directory.
 
 ```bash
-$ git clone https://github.com/ajdnik/powerbar $HOME/Library/Application\ Support/Übersicht/widgets/powerbar
+$ git clone https://github.com/kkga/nibar $HOME/Library/Application\ Support/Übersicht/widgets/nibar
 ```
-
-2. Make sure you've got [chunkwm](https://koekeishiya.github.io/chunkwm/) installed if you wish to use desktop support.
