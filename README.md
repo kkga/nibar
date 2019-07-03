@@ -2,6 +2,8 @@
 
 Simple [Übersicht](https://github.com/felixhageloh/uebersicht) widget status bar with [yabai](https://github.com/koekeishiya/yabai) support.
 
+Mostly based on https://github.com/ajdnik/powerbar. I made it work with yabai and tweaked the aesthetics to match my preference.
+
 ## Screenshot
 
 ![img](./ss.png)
