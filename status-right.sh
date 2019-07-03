@@ -68,7 +68,7 @@ fi
 
 export LC_TIME="en_US.UTF-8"
 TIME=$(date +"%H:%M")
-DATE=$(date +"%a %d/%m/%Y")
+DATE=$(date +"%a %d/%m")
 
 BATTERY_PERCENTAGE=$(pmset -g batt | egrep '([0-9]+\%).*' -o --colour=auto | cut -f1 -d'%')
 
