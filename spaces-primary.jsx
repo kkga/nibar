@@ -3,7 +3,7 @@ import Error from "./lib/Error/index.jsx";
 import { leftSide } from "./lib/style.jsx";
 import parse from "./lib/parse.jsx";
 
-export const refreshFrequency = 1000000;
+export const refreshFrequency = false;
 
 export const command = "./nibar/spaces-primary.sh";
 
