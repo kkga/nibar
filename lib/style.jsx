@@ -1,5 +1,7 @@
 export const bar = {
   background: "#1D1D1D",
+  cursor: "default",
+  userSelect: "none",
   zIndex: "-1",
   width: "100%",
   height: "20px",

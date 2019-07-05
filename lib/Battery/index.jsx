@@ -33,7 +33,6 @@ const render = ({ output }) => {
   return (
     <div>
       <div style={contentStyle}>
-        bat&nbsp;
         {output.charging ? "+" : "-"}
         {output.percentage}%
       </div>
