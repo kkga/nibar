@@ -18,6 +18,7 @@ const render = ({ output }) => {
   if (typeof output === "undefined") return null;
 
   const app = output.app;
+  const type = output.type;
   const spaces = [];
 
   output.spaces.forEach(function(space) {
@@ -26,7 +27,7 @@ const render = ({ output }) => {
 
   return (
     <div style={container}>
-      {spaces} {app}
+      {spaces} [{type}] {app}
     </div>
   );
 };

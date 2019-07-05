@@ -1,7 +1,7 @@
 export const container = {
   display: "grid",
   gridAutoFlow: "column",
-  gridGap: "20px",
+  gridGap: "16px",
   color: "#6C6C6C"
 };
 
