@@ -27,6 +27,7 @@ export const leftSide = {
   lineHeight: "20px",
   fontFamily: "Iosevka",
   fontSize: "10pt",
+  fontWeight: "600",
   color: "#bcbcbc"
 };
 
@@ -43,6 +44,7 @@ export const rightSide = {
   top: "0px",
   fontFamily: "Iosevka",
   fontSize: "10pt",
+  fontWeight: "600",
   lineHeight: "20px",
   color: "#6C6C6C"
 };
