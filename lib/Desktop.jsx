@@ -1,7 +1,17 @@
-import { container, content } from "./style.jsx";
+const containerStyle = {
+  display: "grid",
+  gridAutoFlow: "column",
+  gridGap: "16px",
+  color: "#6C6C6C"
+};
+
+const desktopStyle = {
+  width: "2ch",
+  textAlign: "left"
+};
 
 const renderSpace = (index, active, windows) => {
-  let contentStyle = JSON.parse(JSON.stringify(content));
+  let contentStyle = JSON.parse(JSON.stringify(desktopStyle));
   let hasWindows = windows > 0;
   if (index == active) {
     contentStyle.color = "#FFFFFF";
@@ -26,7 +36,7 @@ const render = ({ output }) => {
   });
 
   return (
-    <div style={container}>
+    <div style={containerStyle}>
       {spaces} [{type}] {app}
     </div>
   );

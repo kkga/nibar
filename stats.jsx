@@ -1,14 +1,30 @@
-import DateTime from "./lib/DateTime/index.jsx";
-import Battery from "./lib/Battery/index.jsx";
-import Cpu from "./lib/Cpu/index.jsx";
-import Wifi from "./lib/Wifi/index.jsx";
-import Error from "./lib/Error/index.jsx";
-import { rightSide } from "./lib/style.jsx";
+import DateTime from "./lib/DateTime.jsx";
+import Battery from "./lib/Battery.jsx";
+import Cpu from "./lib/Cpu.jsx";
+import Wifi from "./lib/Wifi.jsx";
+import Error from "./lib/Error.jsx";
 import parse from "./lib/parse.jsx";
+
+const style = {
+  display: "grid",
+  padding: "0 12px",
+  gridAutoFlow: "column",
+  gridGap: "20px",
+  height: "20px",
+  position: "fixed",
+  overflow: "hidden",
+  right: "0px",
+  top: "0px",
+  fontFamily: "Iosevka",
+  fontSize: "10pt",
+  fontWeight: "600",
+  lineHeight: "20px",
+  color: "#6C6C6C"
+};
 
 export const refreshFrequency = 50000;
 
-export const command = "./nibar/stats.sh";
+export const command = "./nibar/scripts/stats.sh";
 
 export const render = ({ output }) => {
   console.log(`Right bar output: ${output}`);
@@ -16,13 +32,13 @@ export const render = ({ output }) => {
   console.log(data);
   if (typeof data === "undefined") {
     return (
-      <div style={rightSide}>
+      <div style={style}>
         <Error msg="Error: unknown script output" side="right" />
       </div>
     );
   }
   return (
-    <div style={rightSide}>
+    <div style={style}>
       <Wifi output={data.wifi} />
       <Cpu output={data.cpu} />
       <Battery output={data.battery} />
