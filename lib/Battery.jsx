@@ -1,23 +1,14 @@
-const updateStyling = (batteryPercentage, isCharging) => {
-  if (batteryPercentage < 20) {
-    contentStyle.color = "#AF5F5F";
-  }
-};
-
 const render = ({ output }) => {
-  if (typeof output === "undefined") return null;
-  const contentStyle = updateStyling(
-    output.percentage,
-    output.charging
-  );
   return (
     <div>
-      <div style={contentStyle}>
+      <div>
         <span style={{ fontWeight: "900" }}>
           {output.charging ? "⚡" : " "}
         </span>
         &nbsp;
-        {output.percentage}%
+        <span style={output.percentage < 20 ? {color: "#AF5F5F"} : null}>
+          {output.percentage}%
+        </span>
       </div>
     </div>
   );
