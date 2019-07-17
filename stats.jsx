@@ -15,9 +15,9 @@ const style = {
   overflow: "hidden",
   right: "0px",
   top: "0px",
-  fontFamily: "Iosevka",
-  fontSize: "10pt",
-  fontWeight: "600",
+  fontFamily: "-apple-system",
+  fontSize: "8pt",
+  fontWeight: "500",
   lineHeight: "20px",
   color: "#6C6C6C"
 };

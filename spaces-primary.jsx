@@ -13,9 +13,9 @@ const style = {
   left: "0px",
   top: "0px",
   lineHeight: "20px",
-  fontFamily: "Iosevka",
-  fontSize: "10pt",
-  fontWeight: "600",
+  fontFamily: "-apple-system",
+  fontSize: "8pt",
+  fontWeight: "500",
   color: "#bcbcbc"
 };
 

@@ -1,7 +1,7 @@
 const containerStyle = {
   display: "grid",
   gridAutoFlow: "column",
-  gridGap: "16px",
+  gridGap: "8px",
   color: "#6C6C6C"
 };
 
