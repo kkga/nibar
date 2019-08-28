@@ -1,5 +1,7 @@
+import styles from "./lib/styles.jsx";
+
 const style = {
-  background: "#1c1c1c",
+  background: styles.colors.bg,
   cursor: "default",
   userSelect: "none",
   zIndex: "-1",
