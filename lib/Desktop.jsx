@@ -1,7 +1,7 @@
 const containerStyle = {
   display: "grid",
   gridAutoFlow: "column",
-  gridGap: "8px",
+  gridGap: "12px",
   color: "#6C6C6C"
 };
 
@@ -37,7 +37,7 @@ const render = ({ output }) => {
 
   return (
     <div style={containerStyle}>
-      {spaces} [{type}] {app}
+      {spaces} ({type}) {app}
     </div>
   );
 };

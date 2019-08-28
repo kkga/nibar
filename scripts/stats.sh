@@ -71,7 +71,7 @@ TIME=$(date +"%H:%M")
 DATE=$(date +"%a %d %b")
 
 BATTERY_PERCENTAGE=$(pmset -g batt | egrep '([0-9]+\%).*' -o --colour=auto | cut -f1 -d'%')
-
+BATTERY_SPARK=$(spark -min=0 -max=100 $(pmset -g batt | egrep -o '([0-9]+%).*' | cut -d% -f1))
 BATTERY_STATUS=$(pmset -g batt | grep "'.*'" | sed "s/'//g" | cut -c 18-19)
 
 BATTERY_CHARGING=""

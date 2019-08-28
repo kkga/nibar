@@ -4,22 +4,20 @@ import Cpu from "./lib/Cpu.jsx";
 import Wifi from "./lib/Wifi.jsx";
 import Error from "./lib/Error.jsx";
 import parse from "./lib/parse.jsx";
+import styles from "./lib/styles.jsx";
 
 const style = {
   display: "grid",
   padding: "0 12px",
   gridAutoFlow: "column",
-  gridGap: "20px",
-  height: "20px",
+  gridGap: "16px",
   position: "fixed",
   overflow: "hidden",
   right: "0px",
   top: "0px",
-  fontFamily: "-apple-system",
-  fontSize: "8pt",
-  fontWeight: "500",
-  lineHeight: "20px",
-  color: "#6C6C6C"
+  color: styles.colors.dim,
+  fontFamily: styles.fontFamily,
+  lineHeight: styles.lineHeight
 };
 
 export const refreshFrequency = 50000;
@@ -27,7 +25,6 @@ export const refreshFrequency = 50000;
 export const command = "./nibar/scripts/stats.sh";
 
 export const render = ({ output }) => {
-  console.log(`Right bar output: ${output}`);
   const data = parse(output);
   console.log(data);
   if (typeof data === "undefined") {

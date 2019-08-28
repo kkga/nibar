@@ -1,5 +1,5 @@
 const style = {
-  background: "#1D1D1D",
+  background: "#1c1c1c",
   cursor: "default",
   userSelect: "none",
   zIndex: "-1",

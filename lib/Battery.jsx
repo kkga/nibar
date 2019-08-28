@@ -1,12 +1,13 @@
+import styles from "./styles.jsx";
+
 const render = ({ output }) => {
   return (
     <div>
       <div>
-        <span style={{ fontWeight: "900" }}>
-          {output.charging ? "⚡" : " "}
-        </span>
-        &nbsp;
-        <span style={output.percentage < 20 ? {color: "#AF5F5F"} : null}>
+        <span>{output.charging ? "+" : " "}</span>
+        <span
+          style={output.percentage < 20 ? { color: styles.colors.red } : null}
+        >
           {output.percentage}%
         </span>
       </div>
