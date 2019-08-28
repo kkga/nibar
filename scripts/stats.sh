@@ -117,6 +117,7 @@ DATE=$(date +"%a %d/%m")
 
 BATTERY_PERCENTAGE=$(pmset -g batt | egrep '([0-9]+\%).*' -o --colour=auto | cut -f1 -d'%')
 BATTERY_STATUS=$(pmset -g batt | grep "'.*'" | sed "s/'//g" | cut -c 18-19)
+BATTERY_REMAINING=$(pmset -g batt | egrep -o '([0-9]+%).*' | cut -d\  -f3)
 
 BATTERY_CHARGING=""
 if [ "$BATTERY_STATUS" == "Ba" ]; then
@@ -140,7 +141,8 @@ echo $(cat <<-EOF
     },
     "battery": {
         "percentage": $BATTERY_PERCENTAGE,
-        "charging": $BATTERY_CHARGING
+        "charging": $BATTERY_CHARGING,
+		"remaining": "$BATTERY_REMAINING"
     },
     "cpu": {
         "loadAverage": $LOAD_AVERAGE

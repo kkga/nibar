@@ -8,7 +8,7 @@ const render = ({ output }) => {
         <span
           style={output.percentage < 20 ? { color: styles.colors.red } : null}
         >
-          {output.percentage}%
+          {output.percentage}% ({output.remaining})
         </span>
       </div>
     </div>
