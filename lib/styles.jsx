@@ -5,7 +5,8 @@ export default {
     bg: "#1c1c1c",
     red: "#ff8700"
   },
-  fontSize: "15px",
+  fontSize: "14px",
   lineHeight: "20px",
-  fontFamily: "Sudo, monospace"
+  fontWeight: "400",
+  fontFamily: "'PragmataPro Mono', Inter, 'm+ 1mn', monospace"
 };

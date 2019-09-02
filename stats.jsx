@@ -19,16 +19,17 @@ const style = {
   top: "0px",
   color: styles.colors.dim,
   fontFamily: styles.fontFamily,
-  lineHeight: styles.lineHeight
+  fontSize: styles.fontSize,
+  lineHeight: styles.lineHeight,
+  fontWeight: styles.fontWeight
 };
 
-export const refreshFrequency = 50000;
+export const refreshFrequency = 10000;
 
 export const command = "./nibar/scripts/stats.sh";
 
 export const render = ({ output }) => {
   const data = parse(output);
-  console.log(data);
   if (typeof data === "undefined") {
     return (
       <div style={style}>

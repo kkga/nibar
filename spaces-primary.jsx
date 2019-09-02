@@ -14,6 +14,7 @@ const style = {
   top: "0px",
   fontFamily: styles.fontFamily,
   lineHeight: styles.lineHeight,
+  fontWeight: styles.fontWeight,
   fontSize: styles.fontSize,
   color: styles.colors.dim
 };

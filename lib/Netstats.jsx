@@ -37,7 +37,7 @@ const render = ({ output }) => {
         ↓{output.kbin}
         kb
       </span>
-      /
+      &nbsp;/&nbsp;
       <span style={output.kbout > 1000 ? { color: styles.colors.red } : null}>
         ↑{output.kbout}
         kb

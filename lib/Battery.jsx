@@ -1,19 +1,20 @@
 import styles from "./styles.jsx";
 
 const render = ({ output }) => {
+  let charging = output.charging;
+  let percentage = output.percentage;
+  let remainingTime = output.remaining;
   return (
     <div>
       <div
         style={
-          output.percentage < 20 && output.charging == false
+          percentage < 20 && charging == false
             ? { color: styles.colors.red }
             : null
         }
       >
-        <span>{output.charging ? "+" : " "}</span>
-        <span>
-          {output.percentage}% ({output.remaining})
-        </span>
+        <span>{charging ? "+" : " "}</span>
+        <span>{percentage}%</span>
       </div>
     </div>
   );

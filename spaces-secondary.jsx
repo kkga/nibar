@@ -15,7 +15,8 @@ const style = {
   fontFamily: styles.fontFamily,
   lineHeight: styles.lineHeight,
   fontSize: styles.fontSize,
-  color: styles.colors.dim
+  color: styles.colors.dim,
+  fontWeight: styles.fontWeight
 };
 
 export const refreshFrequency = false;
