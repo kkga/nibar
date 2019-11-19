@@ -35,6 +35,10 @@ kbout=`echo "scale=2; $subout/1024;" | bc`
 apkbin=`echo "scale=2; $apsubin/1024;" | bc`
 apkbout=`echo "scale=2; $apsubout/1024;" | bc`
 
+# convert kilobytes to megabytes
+mbin=`echo "scale=2; $kbin/1024;" | bc`
+mbout=`echo "scale=2; $kbout/1024;" | bc`
+
 #AIRPORT: get IP address
 etherip=`ifconfig en0 | grep -E "(inet |status:)" | head -n 1 | awk '{ print $2}'`
 airip=`ifconfig en1 | grep -E "(inet |status:)" | head -n 1 | awk '{ print $2}'`
@@ -153,9 +157,11 @@ echo $(cat <<-EOF
     },
 	"netstats": {
 		"kbin": "$kbin",
-		"kbout": "$kbout"
+		"kbout": "$kbout",
+		"mbin": "$mbin",
+		"mbout": "$mbout"
 	},
-	"dnd": $DND
+    "dnd": $DND
 }
 EOF
 )

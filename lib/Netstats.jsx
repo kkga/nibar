@@ -34,13 +34,13 @@ const render = ({ output }) => {
   return (
     <div>
       <span style={output.kbin > 1000 ? { color: styles.colors.red } : null}>
-        ↓{output.kbin}
-        kb
+        􀄩 {output.mbin}
+        mb
       </span>
-      &nbsp;/&nbsp;
+      &nbsp;&nbsp;
       <span style={output.kbout > 1000 ? { color: styles.colors.red } : null}>
-        ↑{output.kbout}
-        kb
+        􀄨 {output.mbout}
+        mb
       </span>
     </div>
   );

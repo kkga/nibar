@@ -14,13 +14,12 @@ const style = {
   top: "0px",
   fontFamily: styles.fontFamily,
   lineHeight: styles.lineHeight,
-  fontWeight: styles.fontWeight,
   fontSize: styles.fontSize,
-  color: styles.colors.dim
+  color: styles.colors.dim,
+  fontWeight: styles.fontWeight
 };
 
 export const refreshFrequency = false;
-
 export const command = "./nibar/scripts/spaces-primary.sh";
 
 export const render = ({ output }) => {

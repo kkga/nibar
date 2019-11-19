@@ -3,7 +3,7 @@ import styles from "./styles.jsx";
 const containerStyle = {
   display: "grid",
   gridAutoFlow: "column",
-  gridGap: "12px"
+  gridGap: "8px"
 };
 
 const desktopStyle = {
@@ -27,15 +27,17 @@ const renderSpace = (index, active, windows) => {
 const render = ({ output }) => {
   if (typeof output === "undefined") return null;
 
-  // const app = output.app;
-  // const type = output.type;
   const spaces = [];
 
   output.spaces.forEach(function(space) {
     spaces.push(renderSpace(space.index, output.active, space.windows));
   });
 
-  return <div style={containerStyle}>{spaces}</div>;
+  return (
+    <div style={containerStyle}>
+      {spaces}
+    </div>
+  );
 };
 
 export default render;
