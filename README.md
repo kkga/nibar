@@ -15,3 +15,19 @@ Clone this repo to your Übersicht widgets directory.
 ```bash
 $ git clone https://github.com/kkga/nibar $HOME/Library/Application\ Support/Übersicht/widgets/nibar
 ```
+
+## Usage
+
+The widgets for displaying yabai workspaces aren't refreshing automatically.
+
+To refresh them, you can add these lines utilizing [yabai's signals](https://github.com/koekeishiya/yabai/wiki/Commands#automation-with-rules-and-signals) at the end of `.yabairc`:
+
+```sh
+# refresh primary display workspaces
+yabai -m signal --add event=space_changed \
+    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-primary-jsx\"'"
+
+# refresh secondary display workspaces
+yabai -m signal --add event=space_changed \
+    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-secondary-jsx\"'"
+```
