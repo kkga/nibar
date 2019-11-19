@@ -31,3 +31,7 @@ yabai -m signal --add event=space_changed \
 yabai -m signal --add event=space_changed \
     action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-secondary-jsx\"'"
 ```
+
+## TODO
+
+- [ ] add support for `visible` (not `focused`) workspaces
