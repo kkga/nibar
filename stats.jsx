@@ -40,11 +40,11 @@ export const render = ({ output }) => {
   return (
     <div style={style}>
       <Netstats output={data.netstats} />
-      <Dnd output={data.dnd} />
       <Wifi output={data.wifi} />
       <Cpu output={data.cpu} />
       <Battery output={data.battery} />
       <DateTime output={data.datetime} />
+      <Dnd output={data.dnd} />
     </div>
   );
 };
