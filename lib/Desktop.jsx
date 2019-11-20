@@ -7,18 +7,21 @@ const containerStyle = {
 };
 
 const desktopStyle = {
-  width: "2ch"
+  width: "3ch",
 };
 
-const renderSpace = (index, active, windows) => {
+const renderSpace = (index, focused, visible, windows) => {
   let contentStyle = JSON.parse(JSON.stringify(desktopStyle));
   let hasWindows = windows > 0;
-  if (index == active) {
+  if (focused == 1) {
+    contentStyle.color = styles.colors.accent;
+    contentStyle.fontWeight = "700";
+  } else if (visible == 1) {
     contentStyle.color = styles.colors.fg;
   }
   return (
     <div style={contentStyle}>
-      {index}
+      &nbsp;{index}
       {hasWindows ? "°" : " "}
     </div>
   );
@@ -29,8 +32,8 @@ const render = ({ output }) => {
 
   const spaces = [];
 
-  output.spaces.forEach(function(space) {
-    spaces.push(renderSpace(space.index, output.active, space.windows));
+  output.forEach(function(space) {
+    spaces.push(renderSpace(space.index, space.focused, space.visible, space.windows));
   });
 
   return (

@@ -19,7 +19,7 @@ const style = {
 };
 
 export const refreshFrequency = false;
-export const command = "./nibar/scripts/spaces-secondary.sh";
+export const command = "./nibar/scripts/spaces.sh";
 
 export const render = ({ output }) => {
   const data = parse(output);
@@ -39,7 +39,7 @@ export const render = ({ output }) => {
   }
   return (
     <div style={style}>
-      <Desktop output={data.desktop} />
+      <Desktop output={data.spaces_secondary} />
     </div>
   );
 };
