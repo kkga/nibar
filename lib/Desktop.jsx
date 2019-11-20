@@ -12,7 +12,7 @@ const desktopStyle = {
 
 const renderSpace = (index, focused, visible, windows) => {
   let contentStyle = JSON.parse(JSON.stringify(desktopStyle));
-  let hasWindows = windows > 0;
+  let hasWindows = windows.length > 0;
   if (focused == 1) {
     contentStyle.color = styles.colors.accent;
     contentStyle.fontWeight = "700";
