@@ -9,12 +9,10 @@ if ! [ -x "$(command -v yabai)" ]; then
 fi
 
 SPACES_PRIMARY=$(yabai -m query --spaces --display 1)
-SPACES_SECONDARY=$(yabai -m query --spaces --display 2)
 
 echo $(cat <<-EOF
 {
-  "spaces_primary": $SPACES_PRIMARY,
-  "spaces_secondary": $SPACES_SECONDARY
+  "spaces_primary": $SPACES_PRIMARY
 }
 EOF
 )

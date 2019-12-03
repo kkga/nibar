@@ -146,21 +146,21 @@ echo $(cat <<-EOF
     "battery": {
         "percentage": $BATTERY_PERCENTAGE,
         "charging": $BATTERY_CHARGING,
-		"remaining": "$BATTERY_REMAINING"
+	"remaining": "$BATTERY_REMAINING"
     },
     "cpu": {
         "loadAverage": $LOAD_AVERAGE
     },
     "wifi": {
-		"status": "$WIFI_STATUS",
+	"status": "$WIFI_STATUS",
         "ssid": "$WIFI_SSID"
     },
-	"netstats": {
-		"kbin": "$kbin",
-		"kbout": "$kbout",
-		"mbin": "$mbin",
-		"mbout": "$mbout"
-	},
+    "netstats": {
+	"kbin": "$kbin",
+	"kbout": "$kbout",
+	"mbin": "$mbin",
+	"mbout": "$mbout"
+    },
     "dnd": $DND
 }
 EOF

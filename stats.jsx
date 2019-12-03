@@ -12,7 +12,7 @@ const style = {
   display: "grid",
   padding: "0 12px",
   gridAutoFlow: "column",
-  gridGap: "16px",
+  gridGap: "20px",
   position: "fixed",
   overflow: "hidden",
   right: "0px",
@@ -40,8 +40,8 @@ export const render = ({ output }) => {
   return (
     <div style={style}>
       <Netstats output={data.netstats} />
-      <Wifi output={data.wifi} />
       <Cpu output={data.cpu} />
+      <Wifi output={data.wifi} />
       <Battery output={data.battery} />
       <DateTime output={data.datetime} />
       <Dnd output={data.dnd} />

@@ -1,0 +1,122 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/9b28d8c/
+AnonymousFunction2c3af9280100	lib/Desktop.jsx	/^  output.forEach(function(space) {$/;"	f
+Dependencies	README.md	/^## Dependencies$/;"	s
+EOF	scripts/spaces.sh	/^echo $(cat <<-EOF$/;"	h
+EOF	scripts/stats.sh	/^echo $(cat <<-EOF$/;"	h
+Installation	README.md	/^## Installation$/;"	s
+Screenshot	README.md	/^## Screenshot$/;"	s
+TODO	README.md	/^## TODO$/;"	s
+Usage	README.md	/^## Usage$/;"	s
+author	widget.json	/^  "author": "Gadzhi Kharkharov",$/;"	s
+background	bar.jsx	/^  background: styles.colors.bg,$/;"	p	class:style
+charging	lib/Battery.jsx	/^  let charging = output.charging;$/;"	v
+color	lib/Dnd.jsx	/^  color: styles.colors.red$/;"	p	class:style
+color	lib/Error.jsx	/^  color: "#AF5F5F"$/;"	p	class:style
+color	spaces-primary.jsx	/^  color: styles.colors.dim,$/;"	p	class:style
+color	spaces-secondary.jsx	/^  color: styles.colors.dim$/;"	p	class:style
+color	stats.jsx	/^  color: styles.colors.dim,$/;"	p	class:style
+command	spaces-primary.jsx	/^export const command = ".\/nibar\/scripts\/spaces.sh";$/;"	C
+command	spaces-secondary.jsx	/^export const command = ".\/nibar\/scripts\/spaces.sh";$/;"	C
+command	stats.jsx	/^export const command = ".\/nibar\/scripts\/stats.sh";$/;"	C
+containerStyle	lib/Desktop.jsx	/^const containerStyle = {$/;"	c
+contentStyle	lib/Desktop.jsx	/^  let contentStyle = JSON.parse(JSON.stringify(desktopStyle));$/;"	v
+cursor	bar.jsx	/^  cursor: "default",$/;"	p	class:style
+data	lib/Netstats.jsx	/^  const data = event.output.split("#");$/;"	C
+data	spaces-primary.jsx	/^  const data = parse(output);$/;"	C
+data	spaces-secondary.jsx	/^  const data = parse(output);$/;"	C
+data	stats.jsx	/^  const data = parse(output);$/;"	C
+description	widget.json	/^  "description": "Displays a bar at the top of the screen with system stats.",$/;"	s
+desktopStyle	lib/Desktop.jsx	/^const desktopStyle = {$/;"	c
+display	lib/Desktop.jsx	/^  display: "grid",$/;"	p	class:containerStyle
+display	spaces-primary.jsx	/^  display: "grid",$/;"	p	class:style
+display	spaces-secondary.jsx	/^  display: "grid",$/;"	p	class:style
+display	stats.jsx	/^  display: "grid",$/;"	p	class:style
+dwl	lib/Netstats.jsx	/^  const dwl = speed(Math.round(data[0]));$/;"	C
+email	widget.json	/^  "email": "me@kkga.me"$/;"	s
+fontFamily	spaces-primary.jsx	/^  fontFamily: styles.fontFamily,$/;"	p	class:style
+fontFamily	spaces-secondary.jsx	/^  fontFamily: styles.fontFamily,$/;"	p	class:style
+fontFamily	stats.jsx	/^  fontFamily: styles.fontFamily,$/;"	p	class:style
+fontSize	spaces-primary.jsx	/^  fontSize: styles.fontSize,$/;"	p	class:style
+fontSize	spaces-secondary.jsx	/^  fontSize: styles.fontSize,$/;"	p	class:style
+fontSize	stats.jsx	/^  fontSize: styles.fontSize,$/;"	p	class:style
+fontWeight	spaces-primary.jsx	/^  fontWeight: styles.fontWeight$/;"	p	class:style
+fontWeight	stats.jsx	/^  fontWeight: styles.fontWeight$/;"	p	class:style
+gridAutoFlow	lib/Desktop.jsx	/^  gridAutoFlow: "column",$/;"	p	class:containerStyle
+gridAutoFlow	spaces-primary.jsx	/^  gridAutoFlow: "column",$/;"	p	class:style
+gridAutoFlow	spaces-secondary.jsx	/^  gridAutoFlow: "column",$/;"	p	class:style
+gridAutoFlow	stats.jsx	/^  gridAutoFlow: "column",$/;"	p	class:style
+gridGap	lib/Desktop.jsx	/^  gridGap: "8px"$/;"	p	class:containerStyle
+gridGap	spaces-primary.jsx	/^  gridGap: "16px",$/;"	p	class:style
+gridGap	spaces-secondary.jsx	/^  gridGap: "16px",$/;"	p	class:style
+gridGap	stats.jsx	/^  gridGap: "16px",$/;"	p	class:style
+hasWindows	lib/Desktop.jsx	/^  let hasWindows = windows.length > 0;$/;"	v
+height	bar.jsx	/^  height: "20px",$/;"	p	class:style
+left	bar.jsx	/^  left: "0px"$/;"	p	class:style
+left	spaces-primary.jsx	/^  left: "0px",$/;"	p	class:style
+left	spaces-secondary.jsx	/^  left: "0px",$/;"	p	class:style
+lineHeight	spaces-primary.jsx	/^  lineHeight: styles.lineHeight,$/;"	p	class:style
+lineHeight	spaces-secondary.jsx	/^  lineHeight: styles.lineHeight,$/;"	p	class:style
+lineHeight	stats.jsx	/^  lineHeight: styles.lineHeight,$/;"	p	class:style
+name	widget.json	/^  "name": "nibar",$/;"	s
+nibar	README.md	/^# nibar$/;"	c
+overflow	bar.jsx	/^  overflow: "hidden",$/;"	p	class:style
+overflow	spaces-primary.jsx	/^  overflow: "hidden",$/;"	p	class:style
+overflow	spaces-secondary.jsx	/^  overflow: "hidden",$/;"	p	class:style
+overflow	stats.jsx	/^  overflow: "hidden",$/;"	p	class:style
+padding	spaces-primary.jsx	/^  padding: "0 12px",$/;"	p	class:style
+padding	spaces-secondary.jsx	/^  padding: "0 12px",$/;"	p	class:style
+padding	stats.jsx	/^  padding: "0 12px",$/;"	p	class:style
+parse	lib/parse.jsx	/^const parse = data => {$/;"	C
+percentage	lib/Battery.jsx	/^  let percentage = output.percentage;$/;"	v
+position	bar.jsx	/^  position: "fixed",$/;"	p	class:style
+position	spaces-primary.jsx	/^  position: "fixed",$/;"	p	class:style
+position	spaces-secondary.jsx	/^  position: "fixed",$/;"	p	class:style
+position	stats.jsx	/^  position: "fixed",$/;"	p	class:style
+refresh primary display workspaces	README.md	/^# refresh primary display workspaces$/;"	c
+refresh secondary display workspaces	README.md	/^# refresh secondary display workspaces$/;"	c
+refreshFrequency	bar.jsx	/^export const refreshFrequency = 1000000;$/;"	C
+refreshFrequency	spaces-primary.jsx	/^export const refreshFrequency = false;$/;"	C
+refreshFrequency	spaces-secondary.jsx	/^export const refreshFrequency = false;$/;"	C
+refreshFrequency	stats.jsx	/^export const refreshFrequency = 10000;$/;"	C
+remainingTime	lib/Battery.jsx	/^  let remainingTime = output.remaining;$/;"	v
+render	bar.jsx	/^export const render = ({ output }) => {$/;"	C
+render	lib/Battery.jsx	/^const render = ({ output }) => {$/;"	C
+render	lib/Cpu.jsx	/^const render = ({ output }) => {$/;"	C
+render	lib/DateTime.jsx	/^const render = ({ output }) => {$/;"	C
+render	lib/Desktop.jsx	/^const render = ({ output }) => {$/;"	C
+render	lib/Dnd.jsx	/^const render = ({ output }) => {$/;"	C
+render	lib/Error.jsx	/^const render = ({ msg, side }) => {$/;"	C
+render	lib/Netstats.jsx	/^const render = ({ output }) => {$/;"	C
+render	lib/Wifi.jsx	/^const render = ({ output }) => {$/;"	C
+render	spaces-primary.jsx	/^export const render = ({ output }) => {$/;"	C
+render	spaces-secondary.jsx	/^export const render = ({ output }) => {$/;"	C
+render	stats.jsx	/^export const render = ({ output }) => {$/;"	C
+renderSpace	lib/Desktop.jsx	/^const renderSpace = (index, focused, visible, windows) => {$/;"	C
+right	bar.jsx	/^  right: "0px",$/;"	p	class:style
+right	stats.jsx	/^  right: "0px",$/;"	p	class:style
+spaces	lib/Desktop.jsx	/^  const spaces = [];$/;"	C
+speed	lib/Netstats.jsx	/^const speed = type => {$/;"	C
+ssid	lib/Wifi.jsx	/^  const ssid = output.ssid;$/;"	C
+status	lib/Wifi.jsx	/^  const status = output.status;$/;"	C
+style	bar.jsx	/^const style = {$/;"	c
+style	lib/Dnd.jsx	/^const style = {$/;"	c
+style	lib/Error.jsx	/^const style = {$/;"	c
+style	spaces-primary.jsx	/^const style = {$/;"	c
+style	spaces-secondary.jsx	/^const style = {$/;"	c
+style	stats.jsx	/^const style = {$/;"	c
+top	bar.jsx	/^  top: "0px",$/;"	p	class:style
+top	spaces-primary.jsx	/^  top: "0px",$/;"	p	class:style
+top	spaces-secondary.jsx	/^  top: "0px",$/;"	p	class:style
+top	stats.jsx	/^  top: "0px",$/;"	p	class:style
+updateState	lib/Netstats.jsx	/^export const updateState = event => {$/;"	C
+upl	lib/Netstats.jsx	/^  const upl = speed(Math.round(data[1]));$/;"	C
+userSelect	bar.jsx	/^  userSelect: "none",$/;"	p	class:style
+width	bar.jsx	/^  width: "100%",$/;"	p	class:style
+width	lib/Desktop.jsx	/^  width: "3ch",$/;"	p	class:desktopStyle
+zIndex	bar.jsx	/^  zIndex: "-1",$/;"	p	class:style

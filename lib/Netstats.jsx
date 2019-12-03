@@ -33,14 +33,13 @@ const render = ({ output }) => {
   if (typeof output === "undefined") return null;
   return (
     <div>
-      <span style={output.kbin > 1000 ? { color: styles.colors.red } : null}>
-        􀄩 {output.mbin}
-        mb
-      </span>
-      &nbsp;&nbsp;
+      􀄬&nbsp;
       <span style={output.kbout > 1000 ? { color: styles.colors.red } : null}>
-        􀄨 {output.mbout}
-        mb
+        {output.mbout}mb
+      </span>
+      &nbsp;/&nbsp;
+      <span style={output.kbin > 1000 ? { color: styles.colors.red } : null}>
+        {output.mbin}mb
       </span>
     </div>
   );
