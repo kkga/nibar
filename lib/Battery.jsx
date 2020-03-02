@@ -3,6 +3,7 @@ import styles from "./styles.jsx";
 const render = ({ output }) => {
   let charging = output.charging;
   let percentage = output.percentage;
+  let remaining = output.remaining;
   return (
     <div>
       <div
@@ -12,7 +13,7 @@ const render = ({ output }) => {
             : null
         }
       >
-        <span>{charging ? "􀋦" : null} {percentage}%</span>
+        <span>{charging ? "􀋦" : null} {percentage}% ({remaining})</span>
       </div>
     </div>
   );

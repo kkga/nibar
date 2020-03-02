@@ -1,13 +1,13 @@
 export default {
   colors: {
-    fg: "rgba(255,255,255,1)",
-    dim: "rgba(255,255,255,0.65)",
+    fg: "rgba(255,255,255,0.75)",
+    dim: "rgba(255,255,255,0.5)",
     bg: "#1c1c1c",
     red: "#ff8700",
     accent: "#5fafaf"
   },
-  fontSize: "12px",
+  fontSize: "11px",
   lineHeight: "24px",
-  fontWeight: 400,
+  fontWeight: 500,
   fontFamily: "'SF Mono', monospace"
 }

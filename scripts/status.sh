@@ -1,31 +1,46 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-FREE_MEMORY=$(top -l 1 | head -n 7 | grep PhysMem | egrep -o '[0-9]+' | tail -1)
-WIFI_SSID=$(networksetup -getairportnetwork en0 | awk -F": " '{print $2}')
-BATTERY_LEVEL=$(pmset -g batt | egrep '([0-9]+\%).*' -o --colour=auto | cut -f1 -d'%')
-BATTERY_STATUS=$(pmset -g batt | grep "'.*'" | sed "s/'//g" | awk '{print $4}')
-VOLUME_LEVEL=$(osascript -e 'output volume of (get volume settings)')
-VOLUME_MUTED=$(osascript -e 'output muted of (get volume settings)')
+export LC_TIME="en_US.UTF-8"
+TIME=$(date +"%H:%M")
+DATE=$(date +"%a %d/%m")
 
-DATE_TIME=$(date +"%a %H:%M")
+BATTERY_PERCENTAGE=$(pmset -g batt | egrep '([0-9]+\%).*' -o --colour=auto | cut -f1 -d'%')
+BATTERY_STATUS=$(pmset -g batt | grep "'.*'" | sed "s/'//g" | cut -c 18-19)
+BATTERY_REMAINING=$(pmset -g batt | egrep -o '([0-9]+%).*' | cut -d\  -f3)
 
-echo $(cat <<EOF
+BATTERY_CHARGING=""
+if [ "$BATTERY_STATUS" == "Ba" ]; then
+  BATTERY_CHARGING="false"
+elif [ "$BATTERY_STATUS" == "AC" ]; then
+  BATTERY_CHARGING="true"
+fi
+
+LOAD_AVERAGE=$(sysctl -n vm.loadavg | awk '{print $2}')
+
+WIFI_STATUS=$(ifconfig en0 | grep status | cut -c 10-)
+WIFI_SSID=$(networksetup -getairportnetwork en0 | cut -c 24-)
+
+DND=$(defaults -currentHost read com.apple.notificationcenterui doNotDisturb)
+
+echo $(cat <<-EOF
 {
-  "memory": {
-    "free": "$FREE_MEMORY"
-  },
-  "wifi": {
-    "ssid": "$WIFI_SSID"
-  },
-  "battery": {
-    "level": "$BATTERY_LEVEL",
-    "status": "$BATTERY_STATUS"
-  },
-  "volume": {
-    "level": "$VOLUME_LEVEL",
-    "muted": "$VOLUME_MUTED"
-  },
-  "date_time": "$DATE_TIME"
+    "datetime": {
+        "time": "$TIME",
+        "date": "$DATE"
+    },
+    "battery": {
+        "percentage": $BATTERY_PERCENTAGE,
+        "charging": $BATTERY_CHARGING,
+        "remaining": "$BATTERY_REMAINING"
+    },
+    "cpu": {
+        "loadAverage": $LOAD_AVERAGE
+    },
+    "wifi": {
+        "status": "$WIFI_STATUS",
+        "ssid": "$WIFI_SSID"
+    },
+    "dnd": $DND
 }
 EOF
 )

@@ -1,102 +1,50 @@
-import { styled, run } from "uebersicht";
+import DateTime from "./lib/DateTime.jsx";
+import Battery from "./lib/Battery.jsx";
+import Cpu from "./lib/Cpu.jsx";
+import Wifi from "./lib/Wifi.jsx";
+import Dnd from "./lib/Dnd.jsx";
+import Error from "./lib/Error.jsx";
+import parse from "./lib/parse.jsx";
+import styles from "./lib/styles.jsx";
 
-const colors = {
-  background: "transparent",
-  text: "rgba(255,255,255,0.75)"
+const style = {
+  display: "grid",
+  padding: "0 12px",
+  gridAutoFlow: "column",
+  gridGap: "20px",
+  position: "fixed",
+  overflow: "hidden",
+  right: "0px",
+  top: "0px",
+  color: styles.colors.dim,
+  fontFamily: styles.fontFamily,
+  fontSize: styles.fontSize,
+  lineHeight: styles.lineHeight,
+  fontWeight: styles.fontWeight
 };
 
-const execute = (action, interval) => {
-  action();
+export const refreshFrequency = 10000;
 
-  setInterval(action, interval);
-};
+export const command = "./nibar/scripts/status.sh";
 
-export const refreshFrequency = false;
-
-export const command = dispatch => {
-  execute(() => dispatch({ date: new Date() }), 60000);
-
-  execute(() => {
-    run(
-      `pmset -g batt | egrep '([0-9]+\%).*' -o --colour=auto | cut -f1 -d'%'`
-    ).then(battery => dispatch({ battery: parseInt(battery, 10) }));
-  }, 60000);
-
-  execute(() => {
-    run(`pmset -g batt | grep "'.*'" | sed "s/'//g" | cut -c 18-19`).then(
-      power => dispatch({ power: power.trim() })
+export const render = ({ output }) => {
+  const data = parse(output);
+  if (typeof data === "undefined") {
+    return (
+      <div style={style}>
+        <Error msg="Error: unknown script output" side="right" />
+      </div>
     );
-  }, 5000);
-
-  execute(() => {
-    run(`top -l 1 | grep -E "^CPU"`).then(usage => {
-      const values = usage
-        .replace(/^CPU usage:/, "")
-        .split(",")
-        .map(val => parseInt(val, 10));
-
-      dispatch({ cpu: values[0] + values[1] });
-    });
-  }, 60000);
-
-  execute(() => {
-    run(
-      `/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -I | awk -F: '/ SSID/{print $2}'`
-    ).then(wifi => dispatch({ wifi }));
-  }, 60000);
-
-};
-
-export const updateState = (data, previousState) => ({
-  ...previousState,
-  ...data
-});
-
-const Panel = styled("div")`
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  grid-gap: 16px;
-  padding: 0 12px;
-  font-family: "SF Mono", sans-serif;
-  font-weight: 500;
-  font-size: 11px;
-  line-height: 20px;
-  color: ${colors.text};
-  fill: currentColor;
-`;
-
-const Item = styled("button")`
-  appearance: none;
-  background: none;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: inherit;
-  font: inherit;
-`;
-
-const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-export const render = ({ space, date, cpu, battery = 0, power, wifi }) => {
+  }
   return (
-    <Panel>
-      <Item onClick={() => run('open -a "Activity Monitor"')}>􀍽 {cpu}%</Item>
-      <Item>􀙇 {wifi}</Item>
-      <Item>􀒘 {battery}%</Item>
-      <Item>
-        􀉉 {date.getDate()} {days[date.getDay()]}{" "}
-        {("0" + date.getHours()).slice(-2)}:
-        {("0" + date.getMinutes()).slice(-2)}
-      </Item>
-    </Panel>
+    <div style={style}>
+      <Cpu output={data.cpu} />
+      <Wifi output={data.wifi} />
+      <Battery output={data.battery} />
+      <DateTime output={data.datetime} />
+      <Dnd output={data.dnd} />
+    </div>
   );
 };
 
-export const className = `
-  top: 0px;
-  right: 0px;
-`;
+export default null;

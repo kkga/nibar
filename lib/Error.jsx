@@ -1,5 +1,7 @@
+import styles from "./styles.jsx"
+
 const style = {
-  color: "#AF5F5F"
+  color: styles.colors.red
 };
 
 const render = ({ msg, side }) => {
