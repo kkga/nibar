@@ -26,7 +26,7 @@ $ git clone https://github.com/kkga/nibar $HOME/Library/Application\ Support/Üb
 
 ### Yabai workspaces widgets
 
-There a 2 widgets for displaying workspaces: `spaces-primary` and `spaces-secondary`. The `spaces-secondary` is used when working with dual displays.
+There are 2 widgets for displaying workspaces: `spaces-primary` and `spaces-secondary`. The `spaces-secondary` is used when working with dual displays.
 If you're using a single display, disable it in the Übersicht's menu.
 
 ### Refreshing yabai workspaces widget
