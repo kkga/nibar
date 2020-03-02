@@ -6,7 +6,8 @@ export default {
     red: "#ff8700",
     accent: "#5fafaf"
   },
-  fontSize: "11px",
-  lineHeight: "20px",
-  fontFamily: "'SF Mono', 'm+ 1mn', monospace"
+  fontSize: "12px",
+  lineHeight: "24px",
+  fontWeight: 400,
+  fontFamily: "'SF Mono', monospace"
 }
