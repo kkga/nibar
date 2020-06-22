@@ -17,7 +17,7 @@ const renderSpace = (index, focused, visible, windows) => {
   let hasWindows = windows.length > 0;
   if (focused == 1) {
     contentStyle.color = styles.colors.fg;
-    contentStyle.fontWeight = "700";
+    contentStyle.fontWeight = "bold";
   } else if (visible == 1) {
     contentStyle.color = styles.colors.fg;
   }
