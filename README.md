@@ -18,7 +18,7 @@ $ git clone https://github.com/kkga/nibar $HOME/Library/Application\ Support/Üb
 
 ## Dependencies
 
-- [SF Fonts](https://developer.apple.com/fonts/) (optional) — used for symbols in the statusbar widget
+- [SF Symbols](https://developer.apple.com/sf-symbols/) (optional) — used for symbols in the statusbar widget
 
 ## Usage
 
