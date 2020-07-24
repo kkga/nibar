@@ -18,8 +18,6 @@ $ git clone https://github.com/kkga/nibar $HOME/Library/Application\ Support/Üb
 
 ## Dependencies
 
-- [jq](https://github.com/stedolan/jq) — used for parsing json output and displaying the workspaces widget
-    - install with homebrew: `brew install jq`
 - [SF Fonts](https://developer.apple.com/fonts/) (optional) — used for symbols in the statusbar widget
 
 ## Usage
