@@ -8,5 +8,5 @@ export default {
   },
   fontSize: "11px",
   lineHeight: "20px",
-  fontFamily: "'Iosevka Custom Extended', 'SF Mono', monospace"
+  fontFamily: "'Iosevka Custom', 'SF Mono', monospace"
 }
