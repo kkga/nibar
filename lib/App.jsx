@@ -1,5 +1,6 @@
 import styles from "./styles.jsx";
 import run from "uebersicht";
+import config from '../config.json'
 
 const containerStyle = {
   display: "grid",
@@ -8,7 +9,7 @@ const containerStyle = {
 };
 
 const desktopStyle = {
-    maxWidth: "20ch",
+    maxWidth: config.windows_max_win,
     overflow: "hidden"
 
 };

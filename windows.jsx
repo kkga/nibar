@@ -2,6 +2,8 @@ import App from "./lib/App.jsx";
 import Error from "./lib/Error.jsx";
 import parse from "./lib/parse.jsx";
 import styles from "./lib/styles.jsx";
+import config from "./config.json"
+
 
 const style = {
   padding: "0 8px",
@@ -10,7 +12,7 @@ const style = {
   gridGap: "16px",
   position: "fixed",
   overflow: "hidden",
-  left: "400px",
+  left: config.windows_pad,
   top: "0px",
   fontFamily: styles.fontFamily,
   lineHeight: styles.lineHeight,
