@@ -20,9 +20,9 @@ const style = {
 };
 
 export const refreshFrequency = false;
-export const command = "./nibar/scripts/spaces_primary.sh";
+export const command = "./nibar/scripts/spaces.sh";
 
-export const render = ({ output }) => {
+export const render = ({ output }, ...args) => {
   const data = parse(output);
   if (typeof data === "undefined") {
     return (
@@ -38,9 +38,11 @@ export const render = ({ output }) => {
       </div>
     );
   }
+  const displayId = Number(window.location.pathname.replace(/\//g, ''));
+  const display = data.displays.find(d => d.id === displayId);
   return (
     <div style={style}>
-      <Desktop output={data.spaces_primary} />
+      <Desktop output={data.spaces.filter(s => s.display === display.index)} />
     </div>
   );
 };
