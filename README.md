@@ -13,6 +13,7 @@ Originally forked from https://github.com/ajdnik/powerbar. I made it work with y
 Clone this repo to your Übersicht widgets directory.
 
 ```bash
+# assuming your widgets are in the default Übersicht location
 $ git clone https://github.com/kkga/nibar $HOME/Library/Application\ Support/Übersicht/widgets/nibar
 ```
 
@@ -22,39 +23,21 @@ $ git clone https://github.com/kkga/nibar $HOME/Library/Application\ Support/Üb
 
 ## Usage
 
-### Yabai workspaces widgets
-
-There are 2 widgets for displaying workspaces: `spaces-primary` and `spaces-secondary`. The `spaces-secondary` is used when working with dual displays.
-If you're using a single display, disable it in the Übersicht's menu.
-
 ### Refreshing yabai workspaces widget
 
-The widgets for displaying yabai workspaces aren't refreshing automatically (to preserve battery). To refresh them, you can add these lines utilizing [yabai's signals](https://github.com/koekeishiya/yabai/wiki/Commands#automation-with-rules-and-signals) at the end of `.yabairc`:
-
-#### When using a single display
+The workspaces widget is not refreshing automatically (to preserve battery). Add these lines at the end of your `yabairc` to utilize [yabai's signals](https://github.com/koekeishiya/yabai/wiki/Commands#automation-with-rules-and-signals) for auto-updating the widget whenever a workspace is changed:
 
 ```sh
 yabai -m signal --add event=space_changed \
-    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-primary-jsx\"'"
+    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-jsx\"'"
+
+# if using multple displays, add an additional rule for "display_changed" event
+yabai -m signal --add event=display_changed \
+    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-jsx\"'"
 ```
 
-#### When using dual displays
-
 ```sh
-yabai -m signal --add event=space_changed \
-    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-primary-jsx\"'"
-yabai -m signal --add event=display_changed \
-    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-primary-jsx\"'"
-
-yabai -m signal --add event=space_changed \
-    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-secondary-jsx\"'"
-yabai -m signal --add event=display_changed \
-    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-secondary-jsx\"'"
-```
-
-#### For window display
-
-```sh
+# add these rules to auto-update the "windows" widget
 yabai -m signal --add event=window_focused \
     action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-windows-jsx\"'"
 yabai -m signal --add event=window_destroyed \
