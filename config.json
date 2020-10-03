@@ -1,4 +1,4 @@
 {
-  "windows_pad": "300px",
-  "windows_max_win": "30ch"
+  "windows_offset_left": "280px",
+  "windows_label_max_width": "30ch"
 }

@@ -12,7 +12,7 @@ const style = {
   gridGap: "16px",
   position: "fixed",
   overflow: "hidden",
-  left: config.windows_pad,
+  left: config.windows_offset_left,
   top: "0px",
   fontFamily: styles.fontFamily,
   lineHeight: styles.lineHeight,
@@ -42,7 +42,6 @@ export const render = ({ output }) => {
   }
   return (
     <div style={style}>
-      {/*<Error>{data.windows}</Error>*/}
       <App output={data.windows} />
     </div>
   );
