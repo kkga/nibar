@@ -12,7 +12,7 @@ Clone this repo to your Übersicht widgets directory.
 
 ```bash
 # assuming your widgets are in the default Übersicht location
-$ git clone https://github.com/kkga/nibar $HOME/Library/Application\ Support/Übersicht/widgets/nibar
+git clone https://github.com/kkga/nibar $HOME/Library/Application\ Support/Übersicht/widgets/nibar
 ```
 
 ## Dependencies
