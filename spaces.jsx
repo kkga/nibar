@@ -38,7 +38,7 @@ export const render = ({ output }, ...args) => {
       </div>
     );
   }
-  const displayId = Number(window.location.pathname.replace(/\//g, ''));
+  const displayId = Number(window.location.pathname.replace(/\D+/g, ''));
   const display = data.displays.find(d => d.id === displayId);
   return (
     <div style={style}>
