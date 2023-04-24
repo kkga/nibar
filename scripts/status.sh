@@ -20,7 +20,7 @@ LOAD_AVERAGE=$(sysctl -n vm.loadavg | awk '{print $2}')
 WIFI_STATUS=$(ifconfig en0 | grep status | cut -c 10-)
 WIFI_SSID=$(networksetup -getairportnetwork en0 | cut -c 24-)
 
-DND=$(defaults -currentHost read com.apple.notificationcenterui doNotDisturb)
+DND=$(defaults read com.apple.controlcenter "NSStatusItem Visible FocusModes")
 
 echo $(cat <<-EOF
 {
